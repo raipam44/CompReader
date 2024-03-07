@@ -1,0 +1,16 @@
+{% extends 'main/base.html' %}
+{% block title %}Poem{% endblock %}
+{% block content %}
+
+
+{% if poem %}
+    <h2>Random Poem</h2>
+    <h3>{{ poem.title }}</h3>
+    <p>{{ poem.content }}</p>
+{% else %}
+    <p>No poem found.</p>
+{% endif %}
+
+<a href="{% url 'quiz' poem.id %}">Proceed to Quiz</a>
+
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends 'main/base.html' %}
+{% block title %}Home{% endblock %}
+{% block content %}
+{% block navbar %} {% endblock %}
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="d-flex justify-content-center">
+                <a href="{% url 'login' %}" class="btn btn-primary btn-lg">Login</a>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="d-flex justify-content-center">
+                <a href="{% url 'sign_up' %}" class="btn btn-secondary btn-lg">Register</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}
